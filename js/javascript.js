@@ -191,7 +191,8 @@ function equalClicked()
 function delClicked()
 {
     dbg("del is clicked");
-
+    currentOutput = currentOutput.substring (0, currentOutput.length-1)
+    document.getElementById("display").value = currentOutput;
     /* คำแนะนำ
         ให้ใช้ฟังก์ชั่น substring() หรือ slice() เพื่อลบตัวอักษรท้ายสุด 
         ตัวอย่าง:
@@ -211,6 +212,8 @@ function delClicked()
 function clearClicked()
 {
     dbg("C is clicked");
+    currentOutput = "";
+    document.getElementById("display").value = currentOutput;
 
     /* คำแนะนำ
         ให้ล้างค่า currentOutput และอัพเดท HTML text input id="display" โดยการใช้ document.getElementById()
@@ -228,7 +231,10 @@ function clearClicked()
 function poClicked()
 {
     dbg("( is clicked");
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     currentOutput += "(";
     document.getElementById("display").value = currentOutput;
 }
@@ -236,7 +242,10 @@ function poClicked()
 function pcClicked()
 {
     dbg(") is clicked");
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     currentOutput += ")";
     document.getElementById("display").value = currentOutput;
 }
